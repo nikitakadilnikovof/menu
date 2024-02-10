@@ -82,6 +82,7 @@ h1 {
 }
 
 .link_big a {
+    max-width: 100%;
     width: 350px;
     font-size: 24px;
     font-weight: 400;
