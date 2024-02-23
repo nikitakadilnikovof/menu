@@ -117,6 +117,8 @@ h2 {
     width: 100%;
     font-size: 20px;
     font-family: Bellota;
+    color: var(--color2);
+    background-color: var(--color1);
 }
 
 .menu-cart__details div {
