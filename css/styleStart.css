@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Poiret One', sans-serif;
+    font-family: "Bellota Text", sans-serif; 
     --color1: white;
 }
 
@@ -46,6 +46,7 @@ h1 {
     font-size: 64px;
     font-weight: 400;
     line-height: 75px;
+    font-family: "Bellota", system-ui;
 }
 
 .header__elements p {
@@ -79,6 +80,8 @@ h1 {
     line-height: 28px;
     text-decoration: none;
     background-color: rgb(0, 0, 0, 0.38);
+    font-family: "Bellota", system-ui;
+
 }
 
 .link_big a {
@@ -87,7 +90,8 @@ h1 {
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
-    }
+    font-family: "Bellota", system-ui;
+}
 
 .link_big {
     flex-direction: column;
