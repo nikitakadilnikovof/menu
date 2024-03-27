@@ -13,44 +13,49 @@ const menu = {
         },
         {
             img: "2",
-            name: { ru: "Восхитительная вырезка", tr: "Bonfile Lokum", en:"Tenderloin Delight" },
+            name: { ru: "Восхитительная вырезка", tr: "Bonfile Lokum", en: "Tenderloin Delight" },
             description: {
                 ru: "Вырезка на гриле, соте из картофеля, брокколи, цветная капуста, пармезан и руккола",
                 tr: "Izgara lokum bonfile, Patates sote, Brokoli, karnabahar, Parmesan ve Roka ile",
-                en:"Grilled tenderloin, sautéed potatoes, broccoli, cauliflower, Parmesan and arugula"
+                en: "Grilled tenderloin, sautéed potatoes, broccoli, cauliflower, Parmesan and arugula"
             },
             price: "220 TL",
-            time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN"}
+            time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN" }
         },
         {
             img: "3",
-            name: { ru: "Робеспьер", tr: "Robespierre" },
+            name: { ru: "Робеспьер", tr: "Robespierre", en: "Robespierre" },
             description: {
                 ru: "Запеченная говяжья вырезка с шалфеем, розмарином, картофельным соте, пармезаном и рукколой",
-                tr: "Fırında yaprak dana bonfile, adaçayı, biberiye, patates sote, parmesan ve roka ile"
+                tr: "Fırında yaprak dana bonfile, adaçayı, biberiye, patates sote, parmesan ve roka ile",
+                en: "Baked beef tenderloin with sage, rosemary, potato sauté, parmesan and rocket"
             },
             price: "200 TL",
-            time: { ru: "15 МИН", tr:"15 DK" }
+            time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN" }
         },
         {
             img: "4",
-            name: { ru: "Лосось на гриле", tr:"Izgara Somon" },
+            name: { ru: "Лосось на гриле", tr: "Izgara Somon", en: "Grilled Salmon" },
             description: {
                 ru: "Норвежский лосось, приготовленный на гриле, с овощным гарниром, сыром пармезан и рукколой",
-                tr: "Izgara Norveç somonu, Sebze garnitür ve Parmesan peynirli ve Roka ile"
+                tr: "Izgara Norveç somonu, Sebze garnitür ve Parmesan peynirli ve Roka ile",
+                en: "Grilled Norwegian salmon, with vegetable garnish and Parmesan cheese and rocket"
             },
             price: "320 TL",
-            time: { ru: "15 МИН", tr: "15 DK" }
+            time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN" }
         },
         {
             img: "5",
-            name: { ru: "Мясная кесадилья", tr:"Etli Quesadilla" },
+            name: { ru: "Мясная кесадилья", tr: "Etli Quesadilla", en: "Meat Quesadilla" },
             description: {
                 ru: "Обжаренные кусочки говядины, мексиканская фасоль, цветной перец, моцарелла, горчица, острый соус, томатная сальса...",
-                tr:"Tortilla içinde sote dana et parçaları, Meksika fasulyesi, renkli biberler, mozzarella, hardal, acı sos, yanında domates salsa sos..."
+                tr: "Tortilla içinde sote dana et parçaları, Meksika fasulyesi, renkli biberler, mozzarella, hardal, acı sos, yanında domates salsa sos...",
+                en: "Sauteed beef pieces, Mexican beans, colorful peppers, mozzarella, mustard, hot sauce, tomato salsa..."
             },
             price: "260 TL",
-            time: { ru: "20 МИН", tr: "20 DK" }
+            time: {
+                ru: "20 МИН", tr: "20 DK", en: "20 MIN"
+            }
         },
     ],
     snacks: [
@@ -121,27 +126,88 @@ const menu = {
             },
             price: "70 TL",
             time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
+        },
+        {
+            img: "2",
+            name: { ru: "Капучино", tr: "Cappuccino", en: "Cappuccino" },
+            description: {
+                ru: "С эспрессо и молочным кремом",
+                tr: "Espresso ve süt kreması ile",
+                en: "With espresso and milk cream"
+            },
+            price: "35 TL",
+            time: { ru: "2 МИН", tr: "2 DK", en: "2 MIN" }
+        },
+        {
+            img: "3",
+            name: { ru: "Классический турецкий чай", tr: "Klasik Türk Çayı", en: "Classic Turkish Tea" },
+            description: {
+                ru: "Описание товара отсутствует",
+                tr: "Ürün açıklaması bulunmamaktadır",
+                en: "There is no product description"
+            },
+            price: "15 TL",
+            time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
+        },
+        {
+            img: "4",
+            name: { ru: "Бутылка Coca Cola", tr: "Coca Cola Şişe", en: "Coca Cola Bottle" },
+            description: {
+                ru: "Описание товара отсутствует",
+                tr: "Ürün açıklaması bulunmamaktadır",
+                en: "There is no product description"
+            },
+            price: "20 TL",
+            time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
+        },
+        {
+            img: "5",
+            name: { ru: "Бутылка Sprite", tr: "Sprite Şişe", en: "Sprite Bottle" },
+            description: {
+                ru: "Описание товара отсутствует",
+                tr: "Ürün açıklaması bulunmamaktadır",
+                en: "There is no product description"
+            },
+            price: "20 TL",
+            time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
         }
     ]
 }
 
 
 const lang = document.querySelector("html").getAttribute("lang");
+let buttonWord;
+let buttonWordActive;
+if (lang == "ru") {
+    buttonWord = "Выбрать";
+    buttonWordActive = "Выбрано";
+}
+if (lang == "tr") {
+    buttonWord = "Seçmek"
+    buttonWordActive = "Seçildi";
 
+}
+if (lang == "en") {
+    buttonWord = "Choose"
+    buttonWordActive = "Selected";
+}
 
 const menuListAll = document.querySelectorAll(".menu-list");
 
+
+
 for (let i = 0; i < menuListAll.length; i++) {
-    const menuListDiv = menuListAll[i] ;
+    const menuListDiv = menuListAll[i];
     const menuListDivID = menuListDiv.getAttribute("id");
     console.log(menuListDivID);
     for (let i = 0; i < menu[menuListDivID].length; i++) {
         const cartInfo = menu[menuListDivID][i];
         let cartDiv = document.createElement("div");
         cartDiv.className = "menu-cart";
-    
-    
+
+
         cartDiv.innerHTML = `
+        <i class="fa-solid fa-circle-check"></i>
         <img src="./img/menu/${menuListDivID}/${cartInfo.img}.png" alt="">
         <div class="menu-cart__info">
             <div>
@@ -153,15 +219,33 @@ for (let i = 0; i < menuListAll.length; i++) {
                     <span> <i class="fa-solid fa-hand-holding-dollar"></i> ${cartInfo.price}</span>
                     <span> <i class="fa-solid fa-clock"></i> ${cartInfo.time[lang]}</span>
                 </div>
-                <button>Выбрать</button>
+                <button>${buttonWord}</button>
             </div>
         </div>
         `
-    
+
         menuListDiv.appendChild(cartDiv);
-    
+
     }
 }
 
 
-const mainDishesList = document.querySelector("#mainDishes");
+
+const cartButtonAll = document.querySelectorAll(".menu-cart button");
+for (let i = 0; i < cartButtonAll.length; i++) {
+    cartButtonAll[i].onclick = function () {
+        const cart = cartButtonAll[i].parentNode.parentNode.parentNode;
+        cart.classList.toggle("cart_active");
+        if (cart.classList.contains("cart_active")) {
+
+            cartButtonAll[i].innerText = buttonWordActive;
+
+        } else {
+            cartButtonAll[i].innerText = buttonWord;
+        }
+    }
+}
+
+
+
+
