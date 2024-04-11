@@ -8,7 +8,7 @@ const menu = {
                 tr: "Özel BBQ’de, elma odunuyla, 10-12 saate kadar ağır ateşte tütsülenerek pişirilmiş dana kaburga, baharatlı baby patates...",
                 en: "Beef ribs cooked in a special BBQ with apple wood, smoked over a slow fire for 10-12 hours, spicy baby potatoes..."
             },
-            price: "260 TL",
+            price: "260 ",
             time: { ru: "20 МИН", tr: "20 DK", en: "20 MIN" }
         },
         {
@@ -19,7 +19,7 @@ const menu = {
                 tr: "Izgara lokum bonfile, Patates sote, Brokoli, karnabahar, Parmesan ve Roka ile",
                 en: "Grilled tenderloin, sautéed potatoes, broccoli, cauliflower, Parmesan and arugula"
             },
-            price: "220 TL",
+            price: "220 ",
             time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN" }
         },
         {
@@ -30,7 +30,7 @@ const menu = {
                 tr: "Fırında yaprak dana bonfile, adaçayı, biberiye, patates sote, parmesan ve roka ile",
                 en: "Baked beef tenderloin with sage, rosemary, potato sauté, parmesan and rocket"
             },
-            price: "200 TL",
+            price: "200 ",
             time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN" }
         },
         {
@@ -41,7 +41,7 @@ const menu = {
                 tr: "Izgara Norveç somonu, Sebze garnitür ve Parmesan peynirli ve Roka ile",
                 en: "Grilled Norwegian salmon, with vegetable garnish and Parmesan cheese and rocket"
             },
-            price: "320 TL",
+            price: "320",
             time: { ru: "15 МИН", tr: "15 DK", en: "15 MIN" }
         },
         {
@@ -52,7 +52,7 @@ const menu = {
                 tr: "Tortilla içinde sote dana et parçaları, Meksika fasulyesi, renkli biberler, mozzarella, hardal, acı sos, yanında domates salsa sos...",
                 en: "Sauteed beef pieces, Mexican beans, colorful peppers, mozzarella, mustard, hot sauce, tomato salsa..."
             },
-            price: "260 TL",
+            price: "260",
             time: {
                 ru: "20 МИН", tr: "20 DK", en: "20 MIN"
             }
@@ -67,7 +67,7 @@ const menu = {
                 tr: "İthal ve yerli peynir çeşitleri,Kuru kayısı, Ceviz, Zeytin ve grisini",
                 en: "Imported and local cheese varieties, dried apricots, walnuts, olives and grisi"
             },
-            price: "80 TL",
+            price: "80",
             time: { ru: "2 МИН", tr: "20 DK", en: "20 MIN" }
         },
         {
@@ -78,7 +78,7 @@ const menu = {
                 tr: "Tütsülenmiş dana brisket, jalapeno biberi, Meksika fasulyesi, mozzarella ve cheddar peyniri sos, kırmızı-yeşil biber ile",
                 en: "Smoked beef brisket, jalapeno peppers, Mexican beans, mozzarella and cheddar cheese sauce, red and green chili"
             },
-            price: "180 TL",
+            price: "180",
             time: { ru: "15 МИН", tr: "20 DK", en: "20 MIN" }
         },
         {
@@ -89,7 +89,7 @@ const menu = {
                 tr: "Nachos cipslerinde taze avokado ezme ve tava karides, salsa domates sos ile",
                 en: "Nachos chips with fresh avocado pate and pan-fried shrimp, salsa tomato sauce"
             },
-            price: "120 TL",
+            price: "120",
             time: { ru: "5 МИН", tr: "5 DK", en: "5 MIN" }
         },
         {
@@ -100,7 +100,7 @@ const menu = {
                 tr: "Kızarmış ekşi maya köy ekmeğinde trüf mantarlı mayonezli sardalya, rakula, turşu, kapari çiçeği, pancar turşusu ile",
                 en: "Sardine with truffle mayonnaise, rakula, pickles, caper flower, pickled beetroot on toasted sourdough village bread"
             },
-            price: "70 TL",
+            price: "70",
             time: { ru: "5 МИН", tr: "5 DK", en: "5 MIN" }
         },
         {
@@ -111,7 +111,7 @@ const menu = {
                 tr: "Avokado salsa, Ekşi krema, Meksika fasulyesi, jalapeno biberi, Mozzarella ve cheddar peyniri sos, kırmızı-yeşilbiber",
                 en: "Avocado salsa, sour cream, Mexican beans, jalapeno pepper, mozzarella and cheddar cheese sauce, red-green pepper"
             },
-            price: "220 TL",
+            price: "220",
             time: { ru: "5 МИН", tr: "5 DK", en: "5 MIN" }
         }
     ],
@@ -124,7 +124,7 @@ const menu = {
                 tr: "Vanilyalı dondurma ve Espresso ile",
                 en: "With vanilla ice cream and espresso"
             },
-            price: "70 TL",
+            price: "70",
             time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
         },
         {
@@ -135,7 +135,7 @@ const menu = {
                 tr: "Espresso ve süt kreması ile",
                 en: "With espresso and milk cream"
             },
-            price: "35 TL",
+            price: "35",
             time: { ru: "2 МИН", tr: "2 DK", en: "2 MIN" }
         },
         {
@@ -146,7 +146,7 @@ const menu = {
                 tr: "Ürün açıklaması bulunmamaktadır",
                 en: "There is no product description"
             },
-            price: "15 TL",
+            price: "15",
             time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
         },
         {
@@ -157,7 +157,7 @@ const menu = {
                 tr: "Ürün açıklaması bulunmamaktadır",
                 en: "There is no product description"
             },
-            price: "20 TL",
+            price: "20",
             time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
         },
         {
@@ -168,7 +168,7 @@ const menu = {
                 tr: "Ürün açıklaması bulunmamaktadır",
                 en: "There is no product description"
             },
-            price: "20 TL",
+            price: "20",
             time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
         }
     ]
@@ -180,7 +180,7 @@ let buttonWord;
 let buttonWordActive;
 if (lang == "ru") {
     buttonWord = "Выбрать";
-    buttonWordActive = "Выбрано";
+    buttonWordActive = "Отменить";
 }
 if (lang == "tr") {
     buttonWord = "Seçmek"
@@ -216,7 +216,7 @@ for (let i = 0; i < menuListAll.length; i++) {
             </div>
             <div class="menu-cart__details">
                 <div>
-                    <span> <i class="fa-solid fa-hand-holding-dollar"></i> ${cartInfo.price}</span>
+                    <span class="price"> <i class="fa-solid fa-hand-holding-dollar"></i> <span class="price__value"> ${cartInfo.price}</span> TL</span>
                     <span> <i class="fa-solid fa-clock"></i> ${cartInfo.time[lang]}</span>
                 </div>
                 <button>${buttonWord}</button>
@@ -229,23 +229,70 @@ for (let i = 0; i < menuListAll.length; i++) {
     }
 }
 
-
+const basketDiv = document.querySelector(".basket");
 
 const cartButtonAll = document.querySelectorAll(".menu-cart button");
 for (let i = 0; i < cartButtonAll.length; i++) {
     cartButtonAll[i].onclick = function () {
         const cart = cartButtonAll[i].parentNode.parentNode.parentNode;
         cart.classList.toggle("cart_active");
-        if (cart.classList.contains("cart_active")) {
 
+        if (cart.classList.contains("cart_active")) {//если у карточки есть класс cart_actife то есть карточка выбрана
+            let cartInfo = {
+                name: cart.querySelector("h3").innerText,
+                price: cart.querySelector(".price__value").innerText
+            };
+            basket.unshift(cartInfo);
+            console.log(basket)
             cartButtonAll[i].innerText = buttonWordActive;
 
         } else {
             cartButtonAll[i].innerText = buttonWord;
+            const cartName = cart.querySelector("h3").innerText;
+            for (let y = 0; y < basket.length; y++) {
+                const basketElement = basket[y];
+                if (basketElement.name == cartName) {
+                    basket.splice(y, 1);
+                    console.log(basket)
+                }
+            }
         }
+        basketShowHide();
+    }
+}
+const basketList = document.querySelector(".basket__list");
+function basketShowHide() {
+    if (basket.length == 0) {
+
+        basketDiv.classList.remove("basket_active");
+    } else {
+        basketList.innerHTML = "";
+        for (let i = 0; i < basket.length; i++) {
+            const liInfo = basket[i];
+            let basketItemLi = document.createElement("li");
+            basketItemLi.innerHTML = `
+            <h4>${liInfo.name}</h4>
+            <p>
+                <span>${liInfo.price}</span>
+                TL
+            </p>
+            `
+            basketList.appendChild(basketItemLi);
+        }
+        basketDiv.classList.add("basket_active");
+        basketTotal()
     }
 }
 
+function basketTotal() {
+    let basketTotalNumber = 0;
+    for (let i = 0; i < basket.length; i++) {
+        const basketItem = basket[i];
+        const itemPrice = basketItem.price;
+        basketTotalNumber = basketTotalNumber + parseInt(itemPrice);
+    }
+    const totalNumberSpan = document.querySelector("#basketAll");
+    totalNumberSpan.innerText = basketTotalNumber;
+}
 
-
-
+let basket = [];

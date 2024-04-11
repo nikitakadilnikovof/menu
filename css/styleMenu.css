@@ -225,13 +225,14 @@ h2 {
 
 .fa-circle-check {
     color: var(--color1);
-    font-size: 40px;
+    font-size: 100px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50px;
+    right: 50%;
     opacity: 0;
     transition: 0.5s;
     text-shadow: 0 0 8px var(--color2);
+    transform: translateX(50%);
 }
 
 .cart_active .fa-circle-check {
@@ -338,4 +339,60 @@ textarea:focus {
 .wrapper_active {
     opacity: 100;
     visibility: visible;
+}
+
+.basket{
+    background-color: var(--color1);
+    padding: 20px 0 ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 0 0 20px 20px;
+}
+
+.basket_active{
+    opacity: 1;
+    visibility: visible;
+}
+.basket__list{
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.basket h3{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.basket__list span{
+    font-weight: 700;
+}
+.basket::-webkit-scrollbar {
+    width: 6px;
+}
+
+.basket::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: var(--color2);
+    border-radius: 6px;
+}
+
+.basket-total{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: var(--color2);
+    color: var(--color1);
+    border-radius: 0 0 0 10px;
+    font-size: 18px;
+    
 }
