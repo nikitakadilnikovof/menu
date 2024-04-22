@@ -57,6 +57,19 @@ const menu = {
                 ru: "20 МИН", tr: "20 DK", en: "20 MIN"
             }
         },
+        {
+            img: "6",
+            name: { ru: "Комбо из говяжьих ребрышек", tr: "Dana Kaburga Kombo", en: "Beef Rib Combo" },
+            description: {
+                ru: "Говяжьи ребрышки, изысканная колбаса, пряный картофель, салат коулслоу, соус барбекю и корнишоны",
+                tr: "Dana kaburga, gurme sosis, baharatlı baby patates, coleslaw salata, BBQ sos ve kornişyon turşu ile",
+                en: "Beef ribs, gourmet sausage, spicy baby potatoes, coleslaw salad, BBQ sauce and gherkins"
+            },
+            price: "440",
+            time: {
+                ru: "20 МИН", tr: "20 DK", en: "20 MIN"
+            }
+        }
     ],
     snacks: [
         {
@@ -174,6 +187,9 @@ const menu = {
     ]
 }
 
+//конец базы даных 
+
+
 
 const lang = document.querySelector("html").getAttribute("lang");
 let buttonWord;
@@ -192,19 +208,17 @@ if (lang == "en") {
     buttonWordActive = "Selected";
 }
 
-const menuListAll = document.querySelectorAll(".menu-list");
 
 
 
-for (let i = 0; i < menuListAll.length; i++) {
+const menuListAll = document.querySelectorAll(".menu-list");//переменая в которую попадают дивы с котекореями для карточек
+for (let i = 0; i < menuListAll.length; i++) {//цыкл который подставляет все карточки с блюдоми
     const menuListDiv = menuListAll[i];
     const menuListDivID = menuListDiv.getAttribute("id");
-    console.log(menuListDivID);
     for (let i = 0; i < menu[menuListDivID].length; i++) {
         const cartInfo = menu[menuListDivID][i];
         let cartDiv = document.createElement("div");
         cartDiv.className = "menu-cart";
-
 
         cartDiv.innerHTML = `
         <i class="fa-solid fa-circle-check"></i>
@@ -229,17 +243,18 @@ for (let i = 0; i < menuListAll.length; i++) {
             </div>
         </div>
         `
-
         menuListDiv.appendChild(cartDiv);
-
     }
 }
 
-const basketDiv = document.querySelector(".basket");
 
-const cartButtonAll = document.querySelectorAll(".menu-cart .menu-cart__choose");
+
+
+const basketDiv = document.querySelector(".basket");//див в которым отображается карзина 
+
+const cartButtonAll = document.querySelectorAll(".menu-cart .menu-cart__choose");//все кнопки выбрать в карточках
 for (let i = 0; i < cartButtonAll.length; i++) {
-    cartButtonAll[i].onclick = function () {
+    cartButtonAll[i].onclick = function () {//при нажатие на любую кнопку выбора запускаеи функцую
         const cart = cartButtonAll[i].parentNode.parentNode.parentNode;
         cart.classList.toggle("cart_active");
 
@@ -252,10 +267,9 @@ for (let i = 0; i < cartButtonAll.length; i++) {
             };
             cart.querySelector(".amount-number").innerText = 1;
             basket.unshift(cartInfo);
-            console.log(basket)
             cartButtonAll[i].innerText = buttonWordActive;
 
-        } else {
+        } else {// иначе если мы отменяем выбор 
             cartButtonAll[i].innerText = buttonWord;
             cart.querySelector(".amount-number").innerText = 0;
             const cartName = cart.querySelector("h3").innerText;
@@ -263,19 +277,20 @@ for (let i = 0; i < cartButtonAll.length; i++) {
                 const basketElement = basket[y];
                 if (basketElement.name == cartName) {
                     basket.splice(y, 1);
-                    console.log(basket)
                 }
             }
         }
         basketShowHide();
     }
 }
-const basketList = document.querySelector(".basket__list");
-function basketShowHide() {
-    if (basket.length == 0) {
 
+
+
+const basketList = document.querySelector(".basket__list");//див в кором отображаются выброные блюда
+function basketShowHide() {//фуекцыя включения или отключения корзины
+    if (basket.length == 0) {// если корзина пустая то мы ее прячем
         basketDiv.classList.remove("basket_active");
-    } else {
+    } else {//если карина не пустая 
         basketList.innerHTML = "";
         for (let i = 0; i < basket.length; i++) {
             const liInfo = basket[i];
@@ -290,11 +305,14 @@ function basketShowHide() {
             basketList.appendChild(basketItemLi);
         }
         basketDiv.classList.add("basket_active");
-        basketTotal()
+        basketTotal();//запускаем функцыю подсчета стоймость выброных елементов 
     }
 }
 
-function basketTotal() {
+
+
+
+function basketTotal() {//функцыя подсчета стоимости 
     let basketTotalNumber = 0;
     for (let i = 0; i < basket.length; i++) {
         const basketItem = basket[i];
@@ -305,49 +323,52 @@ function basketTotal() {
     totalNumberSpan.innerText = basketTotalNumber;
 }
 
-let basket = [];
+
+
+
+let basket = [];//масив в которуй попалает выброные блюда
 
 
 
 
-const amountButtonsAll = document.querySelectorAll(".menu-cart .menu-cart__amount button");
+const amountButtonsAll = document.querySelectorAll(".menu-cart .menu-cart__amount button");//все кнопки с плюсом и минусом
 for (let i = 0; i < amountButtonsAll.length; i++) {
-    amountButtonsAll[i].onclick = function () {
+    amountButtonsAll[i].onclick = function () {//при ножатии на кнопку щапускается функцыя
         const buttonSimval = amountButtonsAll[i].innerText;
         const cartName = amountButtonsAll[i].parentNode.parentNode.parentNode.querySelector("h3").innerText;
         const amountNumberSpan = amountButtonsAll[i].parentNode.querySelector(".amount-number");
         let amountNumber = parseInt(amountNumberSpan.innerText);
-        if (buttonSimval == "+") {
+        if (buttonSimval == "+") {//если мы нажали на кнопку с плюсом
             amountNumber++;
             amountNumberSpan.innerText = amountNumber;
 
-        } else {
+        } else {//если мы нажали на кнопку с минусом
             amountNumber = amountNumber - 1;
             amountNumberSpan.innerText = amountNumber;
-            if (amountNumber == 0) {
+            if (amountNumber == 0) {//если количевство выбронового блюдо варавно 0
                 const cart = amountButtonsAll[i].parentNode.parentNode.parentNode.parentNode;
                 cart.classList.remove("cart_active");
                 for (let y = 0; y < basket.length; y++) {
-                    console.log(basket)
                     const basketElement = basket[y];
                     if (basketElement.name == cartName) {
-                        basket.splice(y, 1);
+                        basket.splice(y, 1);//ужоляем это блюдо из корзины
                     }
-                    basketShowHide()
+                    basketShowHide()//перересовываем нашу карзину 
                 }
             }
         }
-        basketChange(cartName, amountNumber)
-        console.log(buttonSimval, cartName)
+        basketChange(cartName, amountNumber)//запускаем функцыю изменения даных в карзине 
     }
 }
 
-function basketChange(cartChengeName, amountChengeNumber) {
+
+
+
+function basketChange(cartChengeName, amountChengeNumber) {//функцыя изменения даных в карзине 
     for (let i = 0; i < basket.length; i++) {
         if (basket[i].name == cartChengeName) {
             basket[i].amount = amountChengeNumber;
             basket[i].totalPrice = basket[i].price * basket[i].amount
-            console.log(basket[i])
             basketShowHide()
         }
     }
