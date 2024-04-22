@@ -219,7 +219,13 @@ for (let i = 0; i < menuListAll.length; i++) {
                     <span class="price"> <i class="fa-solid fa-hand-holding-dollar"></i> <span class="price__value"> ${cartInfo.price}</span> TL</span>
                     <span> <i class="fa-solid fa-clock"></i> ${cartInfo.time[lang]}</span>
                 </div>
-                <button>${buttonWord}</button>
+                <div class="menu-cart__amount">
+                    <button> - </button>
+                    <span class="amount-number">0</span>
+                    <button> + </button>
+                </div>
+
+                <button class="menu-cart__choose">${buttonWord}</button>
             </div>
         </div>
         `
@@ -231,7 +237,7 @@ for (let i = 0; i < menuListAll.length; i++) {
 
 const basketDiv = document.querySelector(".basket");
 
-const cartButtonAll = document.querySelectorAll(".menu-cart button");
+const cartButtonAll = document.querySelectorAll(".menu-cart .menu-cart__choose");
 for (let i = 0; i < cartButtonAll.length; i++) {
     cartButtonAll[i].onclick = function () {
         const cart = cartButtonAll[i].parentNode.parentNode.parentNode;
@@ -240,14 +246,18 @@ for (let i = 0; i < cartButtonAll.length; i++) {
         if (cart.classList.contains("cart_active")) {//если у карточки есть класс cart_actife то есть карточка выбрана
             let cartInfo = {
                 name: cart.querySelector("h3").innerText,
-                price: cart.querySelector(".price__value").innerText
+                price: cart.querySelector(".price__value").innerText,//цена за одну штуку
+                amount: 1,//количевство выброных штук
+                totalPrice: cart.querySelector(".price__value").innerText,//цена за все штуки
             };
+            cart.querySelector(".amount-number").innerText = 1;
             basket.unshift(cartInfo);
             console.log(basket)
             cartButtonAll[i].innerText = buttonWordActive;
 
         } else {
             cartButtonAll[i].innerText = buttonWord;
+            cart.querySelector(".amount-number").innerText = 0;
             const cartName = cart.querySelector("h3").innerText;
             for (let y = 0; y < basket.length; y++) {
                 const basketElement = basket[y];
@@ -274,7 +284,7 @@ function basketShowHide() {
             <h4>${liInfo.name}</h4>
             <p>
                 <span>${liInfo.price}</span>
-                TL
+                TL x <span>${liInfo.amount}</span> = <span>${liInfo.totalPrice}</span>TL 
             </p>
             `
             basketList.appendChild(basketItemLi);
@@ -288,11 +298,57 @@ function basketTotal() {
     let basketTotalNumber = 0;
     for (let i = 0; i < basket.length; i++) {
         const basketItem = basket[i];
-        const itemPrice = basketItem.price;
-        basketTotalNumber = basketTotalNumber + parseInt(itemPrice);
+        const itemTotalPrice = basketItem.totalPrice;
+        basketTotalNumber = basketTotalNumber + parseInt(itemTotalPrice);
     }
     const totalNumberSpan = document.querySelector("#basketAll");
     totalNumberSpan.innerText = basketTotalNumber;
 }
 
 let basket = [];
+
+
+
+
+const amountButtonsAll = document.querySelectorAll(".menu-cart .menu-cart__amount button");
+for (let i = 0; i < amountButtonsAll.length; i++) {
+    amountButtonsAll[i].onclick = function () {
+        const buttonSimval = amountButtonsAll[i].innerText;
+        const cartName = amountButtonsAll[i].parentNode.parentNode.parentNode.querySelector("h3").innerText;
+        const amountNumberSpan = amountButtonsAll[i].parentNode.querySelector(".amount-number");
+        let amountNumber = parseInt(amountNumberSpan.innerText);
+        if (buttonSimval == "+") {
+            amountNumber++;
+            amountNumberSpan.innerText = amountNumber;
+
+        } else {
+            amountNumber = amountNumber - 1;
+            amountNumberSpan.innerText = amountNumber;
+            if (amountNumber == 0) {
+                const cart = amountButtonsAll[i].parentNode.parentNode.parentNode.parentNode;
+                cart.classList.remove("cart_active");
+                for (let y = 0; y < basket.length; y++) {
+                    console.log(basket)
+                    const basketElement = basket[y];
+                    if (basketElement.name == cartName) {
+                        basket.splice(y, 1);
+                    }
+                    basketShowHide()
+                }
+            }
+        }
+        basketChange(cartName, amountNumber)
+        console.log(buttonSimval, cartName)
+    }
+}
+
+function basketChange(cartChengeName, amountChengeNumber) {
+    for (let i = 0; i < basket.length; i++) {
+        if (basket[i].name == cartChengeName) {
+            basket[i].amount = amountChengeNumber;
+            basket[i].totalPrice = basket[i].price * basket[i].amount
+            console.log(basket[i])
+            basketShowHide()
+        }
+    }
+}

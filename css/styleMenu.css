@@ -201,7 +201,7 @@ h2 {
     gap: 16px;
 }
 
-.cart_active button {
+/* .cart_active button {
     color: var(--color1);
     background: var(--color2);
 }
@@ -221,7 +221,7 @@ h2 {
 .cart_active {
     background-color: var(--color1);
     box-shadow: 0px 0px 20px 0px var(--color1);
-}
+} */
 
 .fa-circle-check {
     color: var(--color1);
@@ -313,6 +313,7 @@ textarea {
     transition: 0.5s;
     color: var(--color1);
 }
+
 textarea:focus {
     box-shadow: 0 0 16px 0 var(--color1);
 }
@@ -341,9 +342,9 @@ textarea:focus {
     visibility: visible;
 }
 
-.basket{
+.basket {
     background-color: var(--color1);
-    padding: 20px 0 ;
+    padding: 20px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -355,26 +356,28 @@ textarea:focus {
     border-radius: 0 0 20px 20px;
 }
 
-.basket_active{
+.basket_active {
     opacity: 1;
     visibility: visible;
 }
-.basket__list{
+
+.basket__list {
     padding: 0 0 0 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.basket h3{
+.basket h3 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.basket__list span{
+.basket__list span {
     font-weight: 700;
 }
+
 .basket::-webkit-scrollbar {
     width: 6px;
 }
@@ -385,7 +388,7 @@ textarea:focus {
     border-radius: 6px;
 }
 
-.basket-total{
+.basket-total {
     position: fixed;
     top: 0;
     right: 0;
@@ -394,5 +397,26 @@ textarea:focus {
     color: var(--color1);
     border-radius: 0 0 0 10px;
     font-size: 18px;
-    
+
+}
+
+.menu-cart__amount span {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-cart__amount {
+    opacity: 50%;
+    pointer-events: none;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.cart_active .menu-cart__amount {
+    opacity: 1;
+    pointer-events: visible;
+    height: 40px;
 }
