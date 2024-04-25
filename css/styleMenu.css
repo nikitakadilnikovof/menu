@@ -449,10 +449,18 @@ textarea:focus {
     padding: 10px 20px;
     border: none;
     position: fixed;
+    transition: 0.5s;
+    & i{
+        transition: 0.5s;
+    }
 }
 .basket .basket__button_active{
     background-color: var(--color3);
+    & i{
+        transform: rotate(180deg);
+    }
 }
 .basket_active_full{
     height: 100vh;
 }
+
