@@ -344,16 +344,18 @@ textarea:focus {
 
 .basket {
     background-color: var(--color1);
-    padding: 20px 0;
+    padding: 60px 0 20px 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    max-height: 250px;
+    height: 180px;
     overflow-y: auto;
     border-radius: 0 0 20px 20px;
+    transition: 0.5s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.486);
 }
 
 .basket_active {
@@ -379,6 +381,7 @@ textarea:focus {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .basket__list span {
@@ -396,6 +399,9 @@ textarea:focus {
 }
 
 .basket-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -404,7 +410,7 @@ textarea:focus {
     color: var(--color1);
     border-radius: 0 0 0 10px;
     font-size: 18px;
-
+    height: 60px;
 }
 
 .menu-cart__amount span {
@@ -426,4 +432,27 @@ textarea:focus {
     opacity: 1;
     pointer-events: visible;
     height: 40px;
+}
+.basket button{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4px;
+    font-family: "Bellota Text", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--color1);
+    background-color: var(--color2);
+    border-radius: 0 0 10px 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    position: fixed;
+}
+.basket .basket__button_active{
+    background-color: var(--color3);
+}
+.basket_active_full{
+    height: 100vh;
 }
