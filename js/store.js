@@ -184,8 +184,34 @@ const menu = {
             price: "20",
             time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
         }
+    ],
+    alcoholicDrinks: [
+        {
+            img: "1",
+            name: { ru: "Desperados 33 мл", tr: "Desperados 33 ml", en: "Desperados 33 cl" },
+            description: {
+                ru: "Темное фильтрованное пиво",
+                tr: "Koyu filtrelenmiş bira",
+                en: "Dark filtered beer"
+            },
+            price: "100",
+            time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
+        },
+        {
+            img: "2",
+            name: {
+                ru: "Tuborg Gold 33 мл", tr: "Tuborg Gold 33 ml", en: "Tuborg Gold 33 cl" },
+            description: {
+            ru: "Светлое фильтрованное пиво",
+            tr: "Hafif filtrelenmiş bira",
+            en: "Light filtered beer"
+        },
+        price: "100",
+        time: { ru: "1 МИН", tr: "1 DK", en: "1 MIN" }
+        }
     ]
 }
+
 
 //конец базы даных 
 
@@ -303,10 +329,10 @@ function basketShowHide() {//фуекцыя включения или отклю
             const liInfo = basket[i];
             let basketItemLi = document.createElement("li");
             basketItemLi.innerHTML = `
-            <h4>${liInfo.name}</h4>
+            <h4>${liInfo.name}  </h4>
             <p>
-                <span>${liInfo.price}</span>
-                TL x <span>${liInfo.amount}</span> = <span>${liInfo.totalPrice}</span>TL 
+            ×    <span>${liInfo.amount}</span>
+               <span>${liInfo.totalPrice}</span>TL 
             </p>
             `
             basketList.appendChild(basketItemLi);
@@ -354,6 +380,7 @@ for (let i = 0; i < amountButtonsAll.length; i++) {
             amountNumberSpan.innerText = amountNumber;
             if (amountNumber == 0) {//если количевство выбронового блюдо варавно 0
                 const cart = amountButtonsAll[i].parentNode.parentNode.parentNode.parentNode;
+                cart.querySelector('.menu-cart__choose').innerText = buttonWord;
                 cart.classList.remove("cart_active");
                 for (let y = 0; y < basket.length; y++) {
                     const basketElement = basket[y];
@@ -384,12 +411,12 @@ function basketChange(cartChengeName, amountChengeNumber) {//функцыя из
 
 
 const basketButton = document.querySelector(".basket button");
-    basketButton.onclick = function () {
-        basketButton.classList.toggle("basket__button_active");
-        if (basketButton.classList.contains("basket__button_active")){
-            basketButton.querySelector("span").innerText = basketButtonWordActive;
-        }else{
-            basketButton.querySelector("span").innerText = basketButtonWord;
-        }
-        basketDiv.classList.toggle("basket_active_full");
+basketButton.onclick = function () {
+    basketButton.classList.toggle("basket__button_active");
+    if (basketButton.classList.contains("basket__button_active")) {
+        basketButton.querySelector("span").innerText = basketButtonWordActive;
+    } else {
+        basketButton.querySelector("span").innerText = basketButtonWord;
     }
+    basketDiv.classList.toggle("basket_active_full");
+}
