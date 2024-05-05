@@ -168,6 +168,7 @@ h2 {
     height: 200px;
     object-fit: cover;
     object-position: center;
+    border-radius: 0 0 10px 10px;
 }
 
 .menu-cart__info {
@@ -432,7 +433,7 @@ textarea:focus {
     padding: 10px 20px;
     background-color: var(--color2);
     color: var(--color1);
-    border-radius: 0 0 0 10px;
+    border-radius: 10px 10px 0 0px;
     font-size: 18px;
     height: 60px;
     opacity: 0;
