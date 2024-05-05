@@ -413,10 +413,5 @@ function basketChange(cartChengeName, amountChengeNumber) {//функцыя из
 const basketButton = document.querySelector(".basket button");
 basketButton.onclick = function () {
     basketButton.classList.toggle("basket__button_active");
-    if (basketButton.classList.contains("basket__button_active")) {
-        basketButton.querySelector("span").innerText = basketButtonWordActive;
-    } else {
-        basketButton.querySelector("span").innerText = basketButtonWord;
-    }
     basketDiv.classList.toggle("basket_active_full");
 }
