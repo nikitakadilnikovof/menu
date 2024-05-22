@@ -85,6 +85,12 @@ h1 {
     position: absolute;
     left: 20px;
     top: 20px;
+    width: 100px;
+}
+
+.header__logo img{
+    width: 100%;
+    border-radius: 100%;
 }
 
 h2 {
@@ -497,3 +503,7 @@ textarea:focus {
     }
 }
 
+.price{
+    display: flex;
+    flex-direction: column;
+}
